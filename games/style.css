@@ -1,0 +1,23 @@
+body {
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    text-align: center;
+}
+.rounded_link {
+	background: rgb(176,80,80);
+	padding: 15px 30px;
+	border-radius: 44px;
+	color: #fff;
+	font-size: 13px;
+	letter-spacing: 1px;
+	margin-top: 30px;
+	font-weight: 600;
+	display: inline-block;
+	text-transform: uppercase;
+	font-family: arial;
+	text-decoration: none;
+}
+.clear {
+	clear: both;
+}

@@ -1,0 +1,55 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="minimal-ui">
+    <title>Superblink - Eden</title>
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+    body {
+
+        padding: 0px;
+        border: 0px;
+        margin: 0px;
+    }
+    </style>
+    <script type="text/javascript" src="funGrid0963.js" charset="utf-8"></script>
+    <script type="text/javascript" src="funTouch06.js" charset="utf-8"></script>
+    <script type="text/javascript" src="funKeys03.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/wp-content/themes/superblink2/js/superload12.js" charset="utf-8"></script>
+    <script type="text/javascript" src="eden.js" charset="utf-8"></script>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <script>
+    var scale=1;
+    var viewportScale=1;
+    if (window.devicePixelRatio === 2) {
+        // Retina
+        scale = 2;
+        if (window.screen.width===768 && window.screen.height===1024) {
+            // iPad
+            if (window.innerHeight>window.innerWidth) {
+                // Portrait
+                viewportScale = 1.2;
+            } else {
+                // Landscape
+                viewportScale = 0.9;
+            }     
+        } else {
+          scale = 2;
+          viewportScale = 0.5;
+        }
+    } else if (window.innerWidth>=640 && window.innerHeight>=744) {
+        // Non retina big screen
+        scale = 2;
+    }
+    document.write("<meta name=\"viewport\" content=\"initial-scale="+viewportScale+" maximum-scale="+viewportScale+" user-scalable=0 minimal-ui\" />");
+     </script>
+
+</head>
+<body onload="EDEN.init(scale);" bgcolor = "#000000">
+    <span style=""><script>document.write("<canvas id=\"canvas\" width=\""+(scale*320)+"\" height=\""+(scale*372)+"\">"+"No canvas support!"+"</canvas>");</script></span>
+    <div class="clear"></div>
+	<a href="/kategori/spill/mobilspill/" class="rounded_link">‹ Tilbake</a>
+	<!---br/><br/><font color=white>Ser spillet lite ut? Sett nettbrett eller telefon på høykant (portrettformat) og trykk Omstart:</font><br/><a href="/wp-content/themes/superblink2/games/eden/" class="rounded_link">Omstart</a-->
+</body>
+</html>

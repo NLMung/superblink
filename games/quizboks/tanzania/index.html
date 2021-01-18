@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="minimal-ui">
+	<meta charset="utf-8">
+	<title>Superblink - Quizboks Tanzania</title>
+	<link href='../../style.css' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="/wp-content/themes/superblink2/js/superload12.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/wp-content/themes/superblink2/games/quizboks/funTouch06.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/wp-content/themes/superblink2/games/quizboks/funGrid093.js" charset="utf-8"></script>
+    <script type="text/javascript" src="quizdata.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/wp-content/themes/superblink2/games/quizboks/qb.js" charset="utf-8"></script>
+	
+    <script>
+    var scale=1;
+    var viewportScale=1;
+    if (window.devicePixelRatio === 2) {
+        // Retina
+        scale = 2;
+        if (window.screen.width===768 && window.screen.height===1024) {
+            // iPad
+            if (window.innerHeight>window.innerWidth) {
+                // Portrait
+                viewportScale = 1.2;
+            } else {
+                // Landscape
+                viewportScale = 0.9;
+            }     
+        } else {
+          scale = 2;
+          viewportScale = 0.5;
+        }
+    } else if (window.innerWidth>=640 && window.innerHeight>=744) {
+        // Non retina big screen
+        scale = 2;
+    }
+    document.write("<meta name=\"viewport\" content=\"initial-scale="+viewportScale+" maximum-scale="+viewportScale+" user-scalable=0 minimal-ui\" />");
+       </script>
+     
+</head>
+<body onload="QB.init(scale);" bgcolor = "#000000">
+<span style=""><script>document.write("<canvas id=\"canvas\" width=\""+(scale*320)+"\" height=\""+(scale*372)+"\"></canvas>");</script></span>
+    <div class="clear"></div>
+	<a href="/kategori/spill/mobilspill/" class="rounded_link">‹ Tilbake</a>
+</body>
+</html>

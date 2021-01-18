@@ -1,0 +1,70 @@
+<html>
+	<head>
+		
+	</head>
+	<body>
+		<div id="spilleliste">Henter liste...</div>
+		<script>
+			function visListe() {
+			if(localStorage.DLspilleliste) {
+    	var spilleliste = JSON.parse(localStorage.DLspilleliste);
+    	var l = "<table><tr><td><b>Navn</b></td><td><b>Score</b></td><td><b>Telefon<b></td></tr>";
+	for (var i = 0; i<spilleliste.length; i++) {
+		l += "<tr><td>"+spilleliste[i].navn+"</td><td>"+spilleliste[i].score+"</td><td>"+spilleliste[i].tlf+"</td></tr>";
+	}
+	l += "</table>";
+	l += "<button onclick='slett();'>Slett liste</button> <button onclick='tilfeldig();'>Tilfeldig spiller</button>  <button onclick='beste();'>Beste spiller</button>";
+    	document.getElementById("spilleliste").innerHTML = l;
+    	}
+    }
+    function beste() {
+	    var spilleliste = JSON.parse(localStorage.DLspilleliste);
+	    var b = 0;
+	    var n = "";
+	    var s = "";
+	    var t = "";
+	    for (var i = 0; i<spilleliste.length; i++) {
+		    if (spilleliste[i].score>b) {
+			    b = spilleliste[i].score;
+			    s = spilleliste[i].score;
+			    n = spilleliste[i].navn;
+			    t = spilleliste[i].tlf;
+		    }
+	    }
+	    var l = "<b>Beste spill</b><br>"+n+" "+s+" "+t+"<br>";
+	    l += "<button onclick='visListe();'>Vis liste</button>";
+    	document.getElementById("spilleliste").innerHTML = l;
+    }
+    function tilfeldig() {
+	    var spilleliste = JSON.parse(localStorage.DLspilleliste);
+	    if (spilleliste.length>0) {
+		    
+	    
+	    var i = Math.floor(Math.random()*spilleliste.length);
+	    var n = "";
+	    var s = "";
+	    var t = "";
+	    
+			    s = spilleliste[i].score;
+			    n = spilleliste[i].navn;
+			    t = spilleliste[i].tlf;
+		   
+	    var l = "<b>Tilfeldig spill</b><br>"+n+" "+s+" "+t+"<br>";
+	    l += "<button onclick='visListe();'>Vis liste</button>";
+    	document.getElementById("spilleliste").innerHTML = l;
+    	} else {
+    	document.getElementById("spilleliste").innerHTML = "<button onclick='visListe();'>Vis liste</button>";
+    	}
+	    
+    }
+    function slett() {
+	    var r = confirm("Er du sikker på at du vil slette alle resultater?");
+if (r == true) {
+    localStorage.DLspilleliste = JSON.stringify([]);
+    visListe();
+} 
+    }
+    visListe();
+			</script>
+	</body>
+</html>

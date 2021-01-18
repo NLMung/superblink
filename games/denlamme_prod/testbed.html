@@ -1,0 +1,50 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Finn krybben - Uferdig versjon</title>
+    <style type="text/css">
+    body {
+
+        padding: 0px;
+        border: 0px;
+        margin: 0px;
+    }
+    </style>
+    <script type="text/javascript" src="superload.js" charset="utf-8"></script>
+    <script type="text/javascript" src="funGrid096.js" charset="utf-8"></script>
+    <script type="text/javascript" src="funTouch05.js" charset="utf-8"></script>
+    <script type="text/javascript" src="funKeys.js" charset="utf-8"></script>
+    <script type="text/javascript" src="testbed.js" charset="utf-8"></script>
+
+    <script>
+    var scale=1;
+    var viewportScale=1;
+    if (window.devicePixelRatio === 2) {
+        // Retina
+        scale = 2;
+        if (window.screen.width===768 && window.screen.height===1024) {
+            // iPad
+            if (window.innerHeight>window.innerWidth) {
+                // Portrait
+                viewportScale = 1.2;
+            } else {
+                // Landscape
+                viewportScale = 0.9;
+            }     
+        } else {
+          scale = 2;
+          viewportScale = 0.5;
+        }
+    } else if (window.innerWidth>=960 && window.innerHeight>=424) {
+        // Non retina big screen
+        scale = 2;
+    }
+    document.write("<meta name=\"viewport\" content=\"initial-scale="+viewportScale+" maximum-scale="+viewportScale+" user-scalable=0\" />");
+     </script>
+
+</head>
+<body onload="TESTBED.init(scale);" bgcolor = "#000000">
+    <span style=""><script>document.write("<canvas id=\"canvas\" width=\""+(scale*480)+"\" height=\""+(scale*212)+"\">"+"No canvas support!"+"</canvas>");</script></span>
+
+</body>
+</html>
