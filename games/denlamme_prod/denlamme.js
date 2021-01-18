@@ -37,9 +37,9 @@ DL.init = function (scale) {
   
 
   if (DL.s==2) {
-     manifest = [/* {id: "intro", src: "gfx/intro.png"} ,*/ {id: "sprites", src: "gfx/sprites.png"}, {id: "avatar1", src: "../shared/avatars/"+avatars[0]+"_128.png"},{id: "avatar2", src: "../shared/avatars/"+avatars[1]+"_128.png"},{id: "avatar3", src: "../shared/avatars/"+avatars[2]+"_128.png"},{id: "avatar4", src: "../shared/avatars/"+avatars[3]+"_128.png"}];
+     manifest = [/* {id: "intro", src: "gfx/intro.png"} ,*/ {id: "sprites", src: "gfx/sprites.png"}, {id: "avatar1", src: "../avatars/"+avatars[0]+"_128.png"},{id: "avatar2", src: "../avatars/"+avatars[1]+"_128.png"},{id: "avatar3", src: "../avatars/"+avatars[2]+"_128.png"},{id: "avatar4", src: "../avatars/"+avatars[3]+"_128.png"}];
     } else {
-    manifest = [/* {id: "intro", src: "gfx/intro_05.png"},*/ {id: "sprites", src: "gfx/sprites_05.png"},{id: "avatar1", src: "../shared/avatars/"+avatars[0]+"_64.png"},{id: "avatar2", src: "../shared/avatars/"+avatars[1]+"_64.png"},{id: "avatar3", src: "../shared/avatars/"+avatars[2]+"_64.png"},{id: "avatar4", src: "../shared/avatars/"+avatars[3]+"_64.png"}];
+    manifest = [/* {id: "intro", src: "gfx/intro_05.png"},*/ {id: "sprites", src: "gfx/sprites_05.png"},{id: "avatar1", src: "../avatars/"+avatars[0]+"_64.png"},{id: "avatar2", src: "../avatars/"+avatars[1]+"_64.png"},{id: "avatar3", src: "../avatars/"+avatars[2]+"_64.png"},{id: "avatar4", src: "../avatars/"+avatars[3]+"_64.png"}];
     
     }
 

@@ -46,7 +46,7 @@
     <script type="text/javascript" src="funGrid0963.js" charset="utf-8"></script>
     <script type="text/javascript" src="funTouch06.js" charset="utf-8"></script>
     <script type="text/javascript" src="funKeys03.js" charset="utf-8"></script>
-    <script type="text/javascript" src="../shared/js/superload12.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../js/superload12.js" charset="utf-8"></script>
 
     <script>
     var scale=1;
@@ -80,7 +80,7 @@
 </head>
 <body onload="DL.init(scale);" bgcolor = "#000000">
     <span style=""><script>document.write("<canvas id=\"canvas\" width=\""+(scale*480)+"\" height=\""+(scale*212)+"\">"+"No canvas support!"+"</canvas>");</script></span>
-	<!--br><a href="."><img src="../shared/img/sblogo.png"></a-->
+	<!--br><a href="."><img src="../img/sblogo.png"></a-->
 	<!--div id="spilleliste"><button onclick="DL.visListe();">Logg</button></div-->
 	
 </body>
