@@ -19,14 +19,7 @@ DL.init = function (scale) {
   DL.level = 0;
   var manifest;
   
-  
-  var grls = [106, 107, 201, 204, 206, 207, 1524, 1603, 1606];
-  var boyz = [200, 202, 205, 211, 223, 225, 244, 1602, 1605];
-  var avatars = [grls[Math.floor(Math.random()*grls.length)],7,8,boyz[Math.floor(Math.random()*boyz.length)]];
-  
-  if (Math.random()<0.5) {
-	  avatars = [boyz[Math.floor(Math.random()*boyz.length)],8,7,grls[Math.floor(Math.random()*grls.length)]];
-  }
+  var avatars = [106, 9887, 201, 5111];
 
   if (DL.s==2) {
      manifest = [/* {id: "intro", src: "gfx/intro.png"} ,*/ {id: "sprites", src: "gfx/sprites.png"}, {id: "avatar1", src: "../avatars/"+avatars[0]+"_128.png"},{id: "avatar2", src: "../avatars/"+avatars[1]+"_128.png"},{id: "avatar3", src: "../avatars/"+avatars[2]+"_128.png"},{id: "avatar4", src: "../avatars/"+avatars[3]+"_128.png"}];
