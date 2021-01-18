@@ -46,7 +46,7 @@ STR = (function () {
 		}
 		
 		if (sbid!==null && sbid!==undefined) {
-			roomPath = "/wp-content/themes/superblink2/avatars/"+sbid+"_ute_stripe.png";
+			roomPath = "../avatars/"+sbid+"_ute_stripe.png";
 			dg = dgm;
 		} else {
 			sbid="";
@@ -58,7 +58,7 @@ STR = (function () {
 			return;
 		}
 		context = canvas.getContext("2d");
-		var path = "/wp-content/themes/superblink2/stripe-assets/";
+		var path = "../stripe-assets/";
 		var mins = path+"minsuperblink.png";
 		if (window.innerWidth>990) {
         	// firstTouch = true;

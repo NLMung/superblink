@@ -164,7 +164,7 @@ SUPERLOAD = (function () {
 	      // code for IE6, IE5
 	      xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
 	    }
-	    xmlhttp.open("POST","/wp-content/themes/superblink2/scores.php",true);
+	    xmlhttp.open("POST","../scores.php",true);
 	    xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 	    xmlhttp.onreadystatechange = function () {
 
