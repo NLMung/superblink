@@ -1,0 +1,54 @@
+#ivySudoku #main_menu #header,
+#ivySudoku #main_menu h2,
+#ivySudoku #keyboard .square.active:before,
+#ivySudoku .square.active, 
+#ivySudoku .square.editable:active {
+	background: #C64A4F;
+}
+
+#ivySudoku a, #ivySudoku .victory {
+	color: #2D86A6
+}
+#ivySudoku .level {
+	display: none;
+}
+#ivySudoku .status {
+	padding: 0 15px;
+}
+#ivySudoku #keyboard .square,
+#ivySudoku #keyboard .square.active,
+#ivySudoku .square {
+	background: rgba(238, 234, 228, 0.8);
+}
+
+#ivySudoku .editable {
+	background: #ECE9E3;
+}
+
+#ivySudoku .error {
+	background: #C64A4F;
+}
+
+
+#ivySudoku #board .square,
+#ivySudoku #board .group:nth-child(3n+2),
+#ivySudoku #board .group:nth-child(4), 
+#ivySudoku #board .group:nth-child(5), 
+#ivySudoku #board .group:nth-child(6) {
+	border-color: #fff;
+}
+
+#ivySudoku .restart:before {
+	background: #fff;
+}
+
+#ivySudoku .sweet-alert {
+	border: 2px solid #ECE9E3;
+}
+#ivySudoku .sweet-alert button {
+	border-radius: 40px;
+}
+
+#ivySudoku .sweet-overlay {
+	background: rgba(255,255,255,0.8);
+}

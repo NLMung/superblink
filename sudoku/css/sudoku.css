@@ -1,0 +1,531 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,700,500);
+
+#ivySudoku * {
+	font-family: 'Open Sans';
+	font-weight: 700;
+}
+#ivySudoku .clear {
+	clear: both;
+	display: block;
+}
+
+#ivySudoku .clearfix:after {
+	clear: both;
+	content: ' ';
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+#ivySudoku .alignright {
+	float: right;
+	position: relative;
+}
+#ivySudoku .alignleft {
+	float: left;
+	position: relative;
+}
+* html #ivySudoku .clearfix {
+	height: 0;
+}
+
+#ivySudoku .clearfix {
+	display: block;
+}
+
+#ivySudoku .table {
+	width: 100%;
+	height: 100%;
+	display: table;
+}
+
+#ivySudoku .thin {
+	font-weight: 100;
+}
+
+#ivySudoku button {
+	background: #ECE9E3;
+	border: none;
+	position: relative;
+	text-align: center;
+	padding: 0;
+	font-family: 'open sans';
+	outline: none;
+}
+
+#ivySudoku .inactive {
+	opacity: 0.5;
+}
+
+#ivySudoku #container {
+	display: block;
+	width: 500px;
+	margin: auto
+}
+/**
+ *
+ * ______HEADER
+ */
+
+#ivySudoku #header {
+	text-align: left;
+	width: 500px;
+	margin: 60px auto 10px;
+	box-sizing: border-box; 
+	position: relative;
+}
+	#ivySudoku nav {
+		font-size: 24px;
+		font-weight: 700;
+		position: relative;
+	}
+
+	#ivySudoku label {
+		width: 5px;
+		height: 12px;
+		display: block;
+		float: right;
+		overflow: hidden;
+		text-indent: 9999px;
+		position: absolute;
+		right: 10px;
+		top: 50%;
+		margin-top: -3px;
+	}
+	#ivySudoku label:before,
+	#ivySudoku label:after {
+		content: '';
+		width: 0;
+		height: 0;
+		border: 2px solid transparent;
+		border-top-color: #222;
+		position: absolute;
+		top: 0;
+		margin-top: 6px;
+		left: 0;
+	}
+	#ivySudoku label:after {
+		content: '';
+		border-top-color: transparent;
+		border-bottom-color: #222;
+		margin-top: 0px;
+	}
+	#ivySudoku select {
+		font-family: 'open sans', sans-serif;
+		-webkit-appearance: none;
+		background: none;
+		font-size: 10px;
+		line-height: 18px;
+		font-weight: 600;
+		margin: 0;
+		outline: none;
+		padding: 5px 22px 5px 10px;
+		border-radius: 3px;
+		border: 1px solid #fff;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		cursor: pointer;
+	}
+	
+	
+	#ivySudoku .menu_trigger {
+		position: relative;
+		right: 4px;
+		top: 4px;
+		width: 25px;
+		height: 25px;
+		border-top: 1px solid #222;
+		display: block;
+	}
+	#ivySudoku .menu_trigger:before,
+	#ivySudoku .menu_trigger:after {
+		content: ' ';
+		position: absolute;
+		width: 25px;
+		height: 1px;
+		top: 6px;
+		background: #222;
+		display: block;
+	}
+	#ivySudoku .menu_trigger:after {
+		top: 14px;
+	}
+	#ivySudoku .restart,	
+	#ivySudoku .status {
+		margin: 0 0 0 20px;
+		color: #000;
+		font-weight: 600;
+		padding: 0 15px 0;
+		font-size: 16px;
+		line-height: 30px;
+		cursor: pointer;
+	}
+	
+	#ivySudoku .client_logo {
+		width: 30px;
+		height: 30px;
+		text-align: center;
+		position: absolute;
+		left: 0px;
+		top: 2px;
+	}
+		#ivySudoku .client_logo img{
+			width: 100%;
+			height: auto;
+		}
+
+
+
+	/**
+	 * Main menu
+	 */
+
+	#ivySudoku #main_menu {
+		background: rgba(0,0,0,0.7);
+		position: absolute;
+		opacity: 0;
+		pointer-events: none;
+		display: none;
+		z-index: 9999;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		text-align: center;
+	}
+	
+	#ivySudoku #main_menu.active {
+		opacity: 1;
+		pointer-events: all;
+		display: block;
+	}
+
+	#ivySudoku #main_menu .menu_content {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+	}
+	#ivySudoku #main_menu #header{
+		background: #5AA344;
+		max-width: 280px;
+		min-width: 200px;
+		width: 100%;
+		padding: 18px 0;
+		margin: 0 auto;
+		display: block;
+		color: #fff;
+		text-transform: uppercase;
+		position: relative;
+	}
+	#ivySudoku .menuClose {
+		position: absolute;
+		padding: 0 20px;
+		line-height: 60px;
+		top: 0;
+		right: 0;
+		font-size: 30px;
+		font-weight: 100;
+	}
+	#ivySudoku #main_menu .container{
+		background: #fff;
+		margin: 10% 0 0;
+		display: block;
+		margin: auto;
+		clear: both;
+		width: 100%;
+		max-width: 320px;
+		min-width: 200px;
+		width: 100%;
+	}
+	#ivySudoku #main_menu h2 {
+		background: #5AA344;
+		color: #fff;
+		padding: 20px;
+		text-align: left;
+	}
+	#ivySudoku #main_menu h2 span {
+		font-weight: 100;
+		font-size: 30px;
+	}
+	
+	#ivySudoku li {
+		padding: 10px 0;
+		font-size: 12px;
+		font-weight: 400;
+	}
+	#ivySudoku #menu_icon {
+		position: fixed;
+		top: 20px;
+		right: 20px;
+		margin: 0;
+		z-index: 2;
+	}
+
+
+/**
+ *
+ * ______BOARD
+ */
+
+#ivySudoku #board,
+#ivySudoku #keyboard {
+	width: 500px;
+	height: 500px;
+	position: relative;
+	margin: auto;
+	margin-bottom: 20px;
+	box-sizing: border-box; 
+}
+
+
+	#ivySudoku #board {
+		box-sizing: border-box; 
+	}
+	
+	#ivySudoku .group,
+	#ivySudoku .square,
+	#ivySudoku .note {
+		display: block;
+		float: left;
+		position: relative;
+		height: 33.3333%;
+		width: 33.3333%;
+		text-align: center;
+		line-height: 100%;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	#ivySudoku .square {
+		border: 2px solid #eee;
+		cursor: pointer; 
+	}
+	#ivySudoku .note {
+		pointer-events: none;
+		cursor: pointer; 
+	}
+	#ivySudoku .square.active .note {
+		color: #fff;
+	}
+	#ivySudoku .square {
+		background: #fff;
+		color: #888;
+		position: relative;
+		border-radius: 3px;
+/*
+		-webkit-transition: background 0.2s ease
+							color 0.2s ease;
+		transition: background 0.2s ease,
+					color 0.2s ease;
+*/
+	}
+	#ivySudoku .square:active {
+		background: #f7f7f7;
+	}
+	#ivySudoku .square.active,
+	#ivySudoku .square.editable:active {
+		position: relative;
+		z-index: 999;
+		color: #fff;
+		background: #5AA344;
+	}
+	
+	#ivySudoku #board .group:nth-child(3n+2){
+		border-left: 3px solid #eee;
+		border-right: 3px solid #eee;
+	}
+	#ivySudoku #board .group:nth-child(4),
+	#ivySudoku #board .group:nth-child(5),
+	#ivySudoku #board .group:nth-child(6) {
+		border-top: 3px solid #eee;
+		border-bottom: 3px solid #eee;
+	}
+	
+	#ivySudoku .square_number {
+		z-index: 1;
+		font-size: 30px;
+		line-height: 52px;
+	}
+	
+	#ivySudoku .editable {
+		color: #111;
+		background: #fff;
+	}
+	#ivySudoku .error {
+		background: rgb(221, 107, 85);
+		color: #fff !important;
+	}
+	#ivySudoku .note {
+		border: none;
+		line-height: 18px;
+		font-size: 12px;
+		color: #444;
+		padding: 1px;
+		font-weight: 600;
+	}
+	#ivySudoku .victory {
+		color: #75af64;
+	}
+	#ivySudoku #keyboard {
+		height: 110px;
+		margin-bottom: 15px;
+	}
+
+	#ivySudoku #keyboard .square_numbers,
+	#ivySudoku #keyboard .note_numbers  {
+		height: 48%;
+		margin-bottom: 2%;
+	}
+	#ivySudoku #keyboard .square  {
+		width: 9.111111%;
+		margin: 0 1%;
+		color: #222;
+		height: 100%;
+		border: 0 solid transparent;
+		border-bottom: 1px solid #aaa;
+	}
+	#ivySudoku #keyboard .square.active  {
+		background: #fff;
+		color: #fff;
+	}
+	
+	#ivySudoku #keyboard .square.active:before  {
+		content: '×';
+		left: 50%;
+		top: 50%;
+		height: 16px;
+		width: 16px;
+		line-height: 16px;
+		border-radius: 100%;
+		text-align: center;
+		margin-top: -8px;
+		margin-left: -8px;
+		font-size: 10px;
+		font-weight: 600;
+		color: #fff;
+		background: #5AA344;
+		position: absolute;
+
+		display: block;
+	}	
+	#ivySudoku #keyboard.inactive .square {
+		border-bottom: 3px solid transparent;
+	}
+	#ivySudoku .note_numbers .note_number {
+		font-size: inherit;
+		text-align: right;
+		padding: 5px;
+		line-height: 1em;
+	}
+
+	#ivySudoku #instruction{
+		background: none;
+		border-radius: 3px;
+		margin: 1%;
+		-webkit-transition: all .3s linear;
+		transition: all .3s linear;
+		font-size: 13px;
+		padding: 10px 0;
+		line-height: 1.4em;
+	}	
+	#ivySudoku #instruction.animate {
+		background: #fff;
+	}
+
+@media all and (min-width: 768px) and (max-width: 1024px)  {
+	#ivySudoku #container,
+	#ivySudoku #header {
+		width: 750px;
+		margin: 10px auto;
+	}
+	#ivySudoku #header {
+		margin: 40px auto 20px;
+		padding-right: 250px; 
+	}
+	#ivySudoku #board, #ivySudoku #keyboard {
+		width: 500px;
+		height: 500px;
+		float: left;
+		margin-bottom: 5px;
+	}
+	#ivySudoku #keyboard .square_numbers, #ivySudoku #keyboard .note_numbers {
+		width: 100%;
+		height: 180px;
+		margin-bottom: 20px;
+		float: left;
+		clear: none;
+	}
+	#ivySudoku #keyboard {
+	    height: 445px;
+	    margin-top: 60px;
+	    width: 180px;
+	    float: right;
+	}
+	#ivySudoku #keyboard .square {
+		width: 30.3333%;
+		margin: 0 1.5% 2.5%;
+		height: 29.3333%;
+	}
+	#ivySudoku .square_number {
+		font-size: 24px;
+		line-height: 50px;
+	}
+	#ivySudoku .note {
+		font-size: 14px;
+		line-height: 17px;
+	}
+	#ivySudoku .note_numbers .note_number {
+		font-size: 14px;
+		padding: 4px;
+		line-height: 17px;
+	}
+	#ivySudoku #instruction {
+		padding-right: 15px;
+		padding-left: 15px;
+		width: 500px;
+		margin: 5px 0 0;
+		font-size: 16px;
+	}
+}
+
+
+@media all and (max-width: 767px) {
+	#ivySudoku #container {
+		width: 308px;
+	}
+	#ivySudoku #header {
+		width: 308px;
+		margin-top: 10px;
+	}
+	#ivySudoku #board .square {
+		border: 1px solid #eee;
+	}
+	
+	#ivySudoku #board, #ivySudoku #keyboard {
+		width: 308px;
+		height: 308px;
+		margin-bottom: 10px
+	}
+	#ivySudoku #keyboard {
+		height: 70px;
+	}
+	#ivySudoku .square_number {
+		font-size: 18px;
+		line-height: 30px;
+	}
+	#ivySudoku #keyboard .square_number {
+		line-height: 32px;
+	}
+	#ivySudoku .note {
+		font-size: 9px;
+		line-height: 9px;
+		padding: 1px;
+	}
+	#ivySudoku .note_numbers .note_number {
+		font-size: 10px;
+		padding: 2px 3px;
+		line-height: 10px;
+	}
+}
